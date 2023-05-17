@@ -92,6 +92,7 @@ class TgUploader:
             if not REMNAME.startswith('|'):
                 REMNAME = f"|{REMNAME}"
             PRENAME = PRENAME.replace('\s', ' ')
+            PRENAME = PRENAME.replace('/s', ' ') 
             slit = REMNAME.split("|")
             __newFileName = file_
             for rep in range(1, len(slit)):

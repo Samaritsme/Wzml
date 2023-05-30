@@ -51,9 +51,9 @@ class _BotCommands:
         self.DeleteCommand = getCommand('DELETE_COMMAND', f'del{CMD_INDEX}')
         self.ShellCommand = getCommand('SHELL_COMMAND', f'shell{CMD_INDEX}')
         self.ExecHelpCommand = getCommand('EXEHELP_COMMAND', f'exechelp{CMD_INDEX}')
-        self.LeechSetCommand = getCommand('LEECHSET_COMMAND', f'leechset{CMD_INDEX}')
-        self.SetThumbCommand = getCommand('SETTHUMB_COMMAND', f'setthumb{CMD_INDEX}')
-        self.LeechCommand = getCommand('LEECH_COMMAND', f'leech{CMD_INDEX}')
+        self.LeechSetCommand = getCommand('LEECHSET_COMMAND', f'leechset{CMD_INDEX}'), f'ls{CMD_INDEX}'
+        self.SetThumbCommand = getCommand('SETTHUMB_COMMAND', f'setthumb{CMD_INDEX}'), f'stb{CMD_INDEX}'
+        self.LeechCommand = getCommand('LEECH_COMMAND', f'leech{CMD_INDEX}'), f'l{CMD_INDEX}'
         self.UnzipLeechCommand = getCommand('UNZIPLEECH_COMMAND', f'unzipleech{CMD_INDEX}'), f'uzl{CMD_INDEX}'
         self.ZipLeechCommand = getCommand('ZIPLEECH_COMMAND', f'zipleech{CMD_INDEX}'), f'zl{CMD_INDEX}'
         self.QbLeechCommand = getCommand('QBLEECH_COMMAND', f'qbleech{CMD_INDEX}'), f'ql{CMD_INDEX}'
@@ -69,8 +69,8 @@ class _BotCommands:
         self.RssUnSubCommand = getCommand('RSSUNSUB_COMMAND', f'rssunsub{CMD_INDEX}')
         self.RssSettingsCommand = getCommand('RSSSET_COMMAND', f'rssset{CMD_INDEX}')
         self.WayBackCommand = getCommand('WAYBACK_COMMAND', f'wayback{CMD_INDEX}')
-        self.AddleechlogCommand = getCommand('ADDLEECHLOG_CMD', f'addleechlog{CMD_INDEX}')
-        self.RmleechlogCommand = getCommand('RMLEECHLOG_CMD', f'rmleechlog{CMD_INDEX}')
+        self.AddleechlogCommand = getCommand('ADDLEECHLOG_CMD', f'addleechlog{CMD_INDEX}'), f'all{CMD_INDEX}'
+        self.RmleechlogCommand = getCommand('RMLEECHLOG_CMD', f'rmleechlog{CMD_INDEX}'), f'rll{CMD_INDEX}'
         self.UsageCommand = getCommand('USAGE_COMMAND', f'usage{CMD_INDEX}')
         self.SleepCommand = getCommand('SLEEP_COMMAND', f'sleep{CMD_INDEX}')
         self.EvalCommand = f'eval{CMD_INDEX}'

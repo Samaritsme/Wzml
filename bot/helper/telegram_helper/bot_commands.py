@@ -12,11 +12,11 @@ def getCommand(name: str, command: str):
 class _BotCommands:
     def __init__(self):
         self.StartCommand = getCommand(f'START_COMMAND', f'start{CMD_INDEX}'), f'st{CMD_INDEX}'
-        self.MirrorCommand = getCommand('MIRROR_COMMAND', f'mirror{CMD_INDEX}'),f'm{CMD_INDEX}'
-        self.UnzipMirrorCommand = getCommand('UNZIP_COMMAND', f'unzipmirror{CMD_INDEX}'),f'uzm{CMD_INDEX}'
+        self.MirrorCommand = getCommand('MIRROR_COMMAND', f'mirror{CMD_INDEX}'), f'm{CMD_INDEX}'
+        self.UnzipMirrorCommand = getCommand('UNZIP_COMMAND', f'unzipmirror{CMD_INDEX}'), f'uzm{CMD_INDEX}'
         self.ZipMirrorCommand = getCommand('ZIP_COMMAND', f'zipmirror{CMD_INDEX}'), f'zm{CMD_INDEX}'
         self.CancelMirror = getCommand('CANCEL_COMMAND', f'cancel{CMD_INDEX}'), f'c{CMD_INDEX}'
-        self.CancelAllCommand = getCommand('CANCEL_ALL_COMMAND', f'cancelall{CMD_INDEX}'),f'ca{CMD_INDEX}'
+        self.CancelAllCommand = getCommand('CANCEL_ALL_COMMAND', f'cancelall{CMD_INDEX}'), f'ca{CMD_INDEX}'
         self.ListCommand = getCommand('LIST_COMMAND', f'list{CMD_INDEX}')
         self.SearchCommand = getCommand('SEARCH_COMMAND', f'search{CMD_INDEX}')
         self.StatusCommand = getCommand('STATUS_COMMAND', f'status{CMD_INDEX}')
@@ -45,7 +45,7 @@ class _BotCommands:
         self.WatchCommand =  getCommand('WATCH_COMMAND', f'watch{CMD_INDEX}'), f'w{CMD_INDEX}'
         self.ZipWatchCommand = getCommand('ZIPWATCH_COMMAND', f'zipwatch{CMD_INDEX}'), f'zw{CMD_INDEX}'
         self.ScrapeCommand = getCommand('SCRAPE_COMMAND', f'scrape{CMD_INDEX}'), f'sm{CMD_INDEX}'
-        self.QbMirrorCommand = getCommand('QBMIRROR_COMMAND', f'qbmirror{CMD_INDEX}'),f'qm{CMD_INDEX}'
+        self.QbMirrorCommand = getCommand('QBMIRROR_COMMAND', f'qbmirror{CMD_INDEX}'), f'qm{CMD_INDEX}'
         self.QbUnzipMirrorCommand = getCommand('QBUNZIP_COMMAND', f'qbunzipmirror{CMD_INDEX}'), f'quzm{CMD_INDEX}'
         self.QbZipMirrorCommand = getCommand('QBZIP_COMMAND', f'qbzipmirror{CMD_INDEX}'), f'qzm{CMD_INDEX}'
         self.DeleteCommand = getCommand('DELETE_COMMAND', f'del{CMD_INDEX}')
@@ -55,7 +55,7 @@ class _BotCommands:
         self.SetThumbCommand = getCommand('SETTHUMB_COMMAND', f'setthumb{CMD_INDEX}')
         self.LeechCommand = getCommand('LEECH_COMMAND', f'leech{CMD_INDEX}')
         self.UnzipLeechCommand = getCommand('UNZIPLEECH_COMMAND', f'unzipleech{CMD_INDEX}'), f'uzl{CMD_INDEX}'
-        self.ZipLeechCommand = getCommand('ZIPLEECH_COMMAND', f'zipleech{CMD_INDEX}'),f'zl{CMD_INDEX}'
+        self.ZipLeechCommand = getCommand('ZIPLEECH_COMMAND', f'zipleech{CMD_INDEX}'), f'zl{CMD_INDEX}'
         self.QbLeechCommand = getCommand('QBLEECH_COMMAND', f'qbleech{CMD_INDEX}'), f'ql{CMD_INDEX}'
         self.QbUnzipLeechCommand = getCommand('QBZIPLEECH_COMMAND', f'qbunzipleech{CMD_INDEX}'), f'quzl{CMD_INDEX}'
         self.QbZipLeechCommand = getCommand('QBUNZIPLEECH_COMMAND', f'qbzipleech{CMD_INDEX}'), f'qzl{CMD_INDEX}'

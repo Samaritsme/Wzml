@@ -16,7 +16,7 @@ class _BotCommands:
         self.UnzipMirrorCommand = getCommand('UNZIP_COMMAND', f'unzipmirror{CMD_INDEX}'),f'uzm{CMD_INDEX}'
         self.ZipMirrorCommand = getCommand('ZIP_COMMAND', f'zipmirror{CMD_INDEX}'), f'zm{CMD_INDEX}'
         self.CancelMirror = getCommand('CANCEL_COMMAND', f'cancel{CMD_INDEX}'), f'c{CMD_INDEX}'
-        self.CancelAllCommand = getCommand('CANCEL_ALL_COMMAND', f'cancelall{CMD_INDEX}')f'ca{CMD_INDEX}'
+        self.CancelAllCommand = getCommand('CANCEL_ALL_COMMAND', f'cancelall{CMD_INDEX}'),f'ca{CMD_INDEX}'
         self.ListCommand = getCommand('LIST_COMMAND', f'list{CMD_INDEX}')
         self.SearchCommand = getCommand('SEARCH_COMMAND', f'search{CMD_INDEX}')
         self.StatusCommand = getCommand('STATUS_COMMAND', f'status{CMD_INDEX}')

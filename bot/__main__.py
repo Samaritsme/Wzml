@@ -70,13 +70,13 @@ def getHerokuDetails(h_api_key, h_app_name):
         quota_remain = account_quota - quota_used
         if EMOJI_THEME is True:
             abc += f'<b></b>\n'
-            abc += f'<b>╭─《🌐 HEROKU STATS 🌐》</b>\n'
+            abc += f'<b>╭─《🌐 VPS STATS 🌐》</b>\n'
             abc += f"<b>├ 💪🏻 FULL</b>: {get_readable_time(account_quota)}\n"
             abc += f"<b>├ 👎🏻 USED</b>: {get_readable_time(quota_used)}\n"
             abc += f"<b>├ 👍🏻 FREE</b>: {get_readable_time(quota_remain)}\n"
         else:
             abc += f'<b></b>\n'
-            abc += f'<b>╭─《 HEROKU STATS 》</b>\n'
+            abc += f'<b>╭─《 VPS STATS 》</b>\n'
             abc += f"<b>├ FULL</b>: {get_readable_time(account_quota)}\n"
             abc += f"<b>├ USED</b>: {get_readable_time(quota_used)}\n"
             abc += f"<b>├ FREE</b>: {get_readable_time(quota_remain)}\n"
@@ -233,8 +233,8 @@ def start(update, context):
         buttons.buildbutton(f"{START_BTN2_NAME}", f"{START_BTN2_URL}")
     reply_markup = buttons.build_menu(2)
     if CustomFilters.authorized_user(update) or CustomFilters.authorized_chat(update):
-        start_string = f'''This bot can mirror all your links to Google Drive!
-Type /{BotCommands.HelpCommand} to get a list of available commands
+        start_string = f'''bot Started In PM\n🍁This Bot Can Leech All Your Links To Magnet Links!
+Type /{Botcommands.Startcommand} To Get A Leech Of Available Commands
 '''
         if PICS:
             sendPhoto(start_string, context.bot, update.message, random.choice(PICS), reply_markup)

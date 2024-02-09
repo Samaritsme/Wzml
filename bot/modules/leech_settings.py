@@ -44,7 +44,7 @@ def getleechinfo(from_user):
     else:
         thumbmsg = "Not Exists"
     if prefix != "Not Exists":
-        buttons.sbutton("Delete Prename", f"leechset {user_id} prename")
+        buttons.sbutton("Delete Prefix", f"leechset {user_id} prefix")
     if suffix != "Not Exists":
         buttons.sbutton("Delete Suffix", f"leechset {user_id} suffix")
     if caption != "Not Exists": 
@@ -126,7 +126,7 @@ def setLeechType(update, context):
         PRE_DICT.pop(user_id)
         if DB_URI: 
             DbManger().user_pre(user_id, '')
-        query.answer(text="Your Prename is Successfully Deleted!", show_alert=True)
+        query.answer(text="Your Prefix is Successfully Deleted!", show_alert=True)
         editLeechType(message, query)
     elif data[2] == "suffix":
         SUF_DICT.pop(user_id)

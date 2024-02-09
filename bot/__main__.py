@@ -233,7 +233,7 @@ def start(update, context):
         buttons.buildbutton(f"{START_BTN2_NAME}", f"{START_BTN2_URL}")
     reply_markup = buttons.build_menu(2)
     if CustomFilters.authorized_user(update) or CustomFilters.authorized_chat(update):
-        start_string = f'''bot Started In PM\n🍁This Bot Can Leech All Your Links To Magnet Links!
+        start_string = f''' Form The bOTz Started In PM \n🍁This Bot Can Leech All Your Links To Magnet & Torrent Links!
 Type /{Botcommands.Startcommand} To Get A Leech Of Available Commands
 '''
         if PICS:

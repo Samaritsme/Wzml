@@ -71,7 +71,7 @@ def suffix_set(update, context):
         if DB_URI:
             DbManger().user_suf(user_id_, suffix_)
             LOGGER.info(f"User : {user_id_} Suffix is Saved in DB")
-        editMessage(f"<u><b><a href='tg://user?id={user_id_}'>{u_men}</a>'s Suffix is Set Successfully 🚀</b></u>\n\n<b>• Suffix Text: </b>{txt}", lm)
+        editMessage(f"<u><b><a href='tg://user?id={user_id_}'>{u_men}</a>'s Suffix is Set Successfully 🦋</b></u>\n\n<b>• Suffix Text: </b>{txt}", lm)
 
 
 def caption_set(update, context):
@@ -233,7 +233,7 @@ def userlog_set(update, context):
     dumpid_ = int(dumpid_.strip())
     try:
         editMessage("<i>Checking Your Channel Interaction ...</i> ♻️", lm)
-        bot.sendMessage(chat_id=dumpid_, text=f'''╭─《 WZML DUMP CHANNEL 》
+        bot.sendMessage(chat_id=dumpid_, text=f'''╭─《 SMD DUMP CHANNEL 》
 │
 ├🆔 <b>Dump ID :</b> <code>{dumpid_}</code>
 │

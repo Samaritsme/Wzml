@@ -100,9 +100,9 @@ def getHerokuDetails(h_api_key, h_app_name):
                     pass
         LOGGER.info(f"This App: {str(app.name)}")
         if EMOJI_THEME is True:
-            abc += f"<b>├ 🎃 APP USAGE:</b> {get_readable_time(AppQuotaUsed)}\n"
+            abc += f"<b>├ 🕸 APP USAGE:</b> {get_readable_time(AppQuotaUsed)}\n"
             abc += f"<b>├ 🗑️ OTHER APP:</b> {get_readable_time(OtherAppsUsage)}\n"
-            abc += f'<b>╰─《 ☣️ {CREDIT_NAME} ☣️ 》</b>'
+            abc += f'<b>╰─《 💃 {CREDIT_NAME} 🎄 》</b>'
         else:
             abc += f"<b>├ APP USAGE:</b> {get_readable_time(AppQuotaUsed)}\n"
             abc += f"<b>├ OTHER APP:</b> {get_readable_time(OtherAppsUsage)}\n"
@@ -161,7 +161,7 @@ def stats(update, context):
     mem_a = get_readable_file_size(memory.available)
     mem_u = get_readable_file_size(memory.used)
     if EMOJI_THEME is True:
-            stats = f'<b>╭─《🌐 BOT STATISTICS 🌐》</b>\n' \
+            stats = f'<b>╭─《🦋 BOT STATISTICS 🦋》</b>\n' \
                     f'<b>├ 🛠 Updated On: </b>{last_commit}\n'\
                     f'<b>├ ⌛ Uptime: </b>{currentTime}\n'\
                     f'<b>├ 🟢 OS Uptime: </b>{osUptime}\n'\
@@ -196,7 +196,7 @@ def stats(update, context):
         user_task = 'No Limit Set' if USER_TASKS_LIMIT is None else f'{USER_TASKS_LIMIT} Tasks/user'
 
         if EMOJI_THEME is True: 
-            stats += f'<b>╭─《 ⚠️ BOT LIMITS ⚠️ 》</b>\n'\
+            stats += f'<b>╭─《 🦋 BOT LIMITS 🦋 》</b>\n'\
                      f'<b>├ 🧲 Torrent/Direct: </b>{torrent_direct}\n'\
                      f'<b>├ 🔐 Zip/Unzip: </b>{zip_unzip}\n'\
                      f'<b>├ 🔷 Leech: </b>{leech_limit}\n'\
@@ -226,8 +226,8 @@ def stats(update, context):
 def start(update, context):
     buttons = ButtonMaker()
     if EMOJI_THEME is True:
-        buttons.buildbutton(f"😎 {START_BTN1_NAME}", f"{START_BTN1_URL}")
-        buttons.buildbutton(f"🔥 {START_BTN2_NAME}", f"{START_BTN2_URL}")
+        buttons.buildbutton(f" {START_BTN1_NAME}", f"{START_BTN1_URL}")
+        buttons.buildbutton(f" {START_BTN2_NAME}", f"{START_BTN2_URL}")
     else:
         buttons.buildbutton(f"{START_BTN1_NAME}", f"{START_BTN1_URL}")
         buttons.buildbutton(f"{START_BTN2_NAME}", f"{START_BTN2_URL}")
@@ -241,7 +241,7 @@ Type /{Botcommands.Startcommand} To Get A Leech Of Available Commands
         else:
             sendMarkup(start_string, context.bot, update.message, reply_markup)
     else:
-        text = f"Not Authorized user, deploy your own mirror bot"
+        text = f"Not Authorized user, deploy your Own Leechbot"
         if PICS:
             sendPhoto(text, context.bot, update.message, random.choice(PICS), reply_markup)
         else:
@@ -256,7 +256,7 @@ def restart(update, context):
         dynoRestart = (cmd[1].lower()).startswith('d')
         dynoKill = (cmd[1].lower()).startswith('k')
     if (not HEROKU_API_KEY) or (not HEROKU_APP_NAME):
-        LOGGER.info("If you want Heroku features, fill HEROKU_APP_NAME HEROKU_API_KEY vars.")
+        LOGGER.info("If you want Vps features, fill HEROKU_APP_NAME HEROKU_API_KEY vars.")
         dynoRestart = False
         dynoKill = False
     if dynoRestart:
@@ -279,8 +279,8 @@ def restart(update, context):
         for po in proclist:
             app.process_formation()[po.type].scale(0)
     else:
-        LOGGER.info("Normally Restarting.")
-        restart_message = sendMessage("Normally Restarting.", context.bot, update.message)
+        LOGGER.info("Abnormally Restarting.")
+        restart_message = sendMessage("Abnormally Restarting.", context.bot, update.message)
         if Interval:
             Interval[0].cancel()
             Interval.clear()
@@ -297,9 +297,9 @@ def restart(update, context):
 def ping(update, context):
     if EMOJI_THEME is True:
         start_time = int(round(time() * 1000))
-        reply = sendMessage("Starting_Ping ⛔", context.bot, update.message)
+        reply = sendMessage("Starting_Ping🦋", context.bot, update.message)
         end_time = int(round(time() * 1000))
-        editMessage(f'{end_time - start_time} ms 🔥', reply)
+        editMessage(f'{end_time - start_time} ms 🦋', reply)
     else:
         start_time = int(round(time() * 1000))
         reply = sendMessage("Starting_Ping ", context.bot, update.message)
@@ -311,7 +311,7 @@ def log(update, context):
 
 
 help_string = '''
-<b><a href='https://github.com/codewithweeb/mirror-with-weeb'>WeebZone</a></b> - The Ultimate Telegram MIrror-Leech Bot to Upload Your File & Link in Google Drive & Telegram
+<b><a href='https://github.com/Samaritsme/Wzml'>WeebZone</a></b> - The Ultimate Telegram Mirror-Leech Bot to Upload Your File & Link in Google Drive & Telegram
 Choose a help category:
 '''
 
@@ -388,13 +388,13 @@ help_string_telegraph_user = f'''
 <br>sites: <code>rarbg, 1337x, yts, etzv, tgx, torlock, piratebay, nyaasi, ettv</code><br><br>
 • <b>/{BotCommands.StatusCommand}</b>: Shows a status of all the downloads
 <br><br>
-• <b>/{BotCommands.UsageCommand}</b>: Shows Heroku App Dyno Usage
+• <b>/{BotCommands.UsageCommand}</b>: Shows Vps App Dyno Usage
 <br><br>
 • <b>/{BotCommands.StatsCommand}</b>: Show Stats of the machine the bot is hosted on
 <br><br>
-• <b>/{BotCommands.SpeedCommand}</b>: Speedtest of Heroku server
+• <b>/{BotCommands.SpeedCommand}</b>: Speedtest of Vps server
 <br><br>
-• <b>/weebhelp</b>: Okatu helper
+• <b>/weebhelp</b>: SMD 👷
 '''
 
 help_user = telegraph.create_page(
@@ -402,7 +402,7 @@ help_user = telegraph.create_page(
     content=help_string_telegraph_user)["path"]
 
 help_string_telegraph_admin = f'''
-<b><u>🛡️ Admin Commands</u></b>
+<b><u>🛡Author Commands</u></b>
 <br><br>
 • <b>/{BotCommands.PingCommand}</b>: Check how long it takes to Ping the Bot
 <br><br>
@@ -437,8 +437,8 @@ help_admin = telegraph.create_page(
 def bot_help(update, context):
     button = ButtonMaker()
     if EMOJI_THEME is True:
-        button.buildbutton("👤 User", f"https://graph.org/{help_user}")
-        button.buildbutton("🛡️ Admin", f"https://graph.org/{help_admin}")
+        button.buildbutton("⚓ User", f"https://graph.org/{help_user}")
+        button.buildbutton("🦋 Admin", f"https://graph.org/{help_admin}")
     else:
         button.buildbutton("User", f"https://graph.org/{help_user}")
         button.buildbutton("Admin", f"https://graph.org/{help_admin}")
@@ -461,7 +461,7 @@ if SET_BOT_COMMANDS:
         (f'{BotCommands.QbLeechCommand[0]}','Leech torrent using qBittorrent'),
         (f'{BotCommands.QbZipLeechCommand[0]}','Leech torrent and upload as zip using qb'),
         (f'{BotCommands.QbUnzipLeechCommand[0]}','Leech torrent and extract using qb'),
-        (f'{BotCommands.LeechWatchCommand[0]}','Leech yt-dlp supported link'),
+        (f'{BotCommands.LeechWatchCommand[0]}','Leech ytdlp supported link'),
         (f'{BotCommands.LeechZipWatchCommand[0]}','Leech yt-dlp supported link as zip'),
         (f'{BotCommands.PreNameCommand}','Set Prename for Leech Files'),
         (f'{BotCommands.SufNameCommand}','Set Suffix for Leech Files'),
@@ -485,7 +485,7 @@ if SET_BOT_COMMANDS:
         (f'{BotCommands.PingCommand}','Ping the bot'),
         (f'{BotCommands.RestartCommand}','Restart the bot'),
         (f'{BotCommands.LogCommand}','Get the bot Log'),
-        (f'{BotCommands.UsageCommand}','Heroku Dyno usage'),
+        (f'{BotCommands.UsageCommand}','Vps Dyno usage'),
         (f'{BotCommands.SleepCommand}','Sleep Bot'),
         (f'{BotCommands.HelpCommand}','Get detailed help')
     ]
@@ -549,12 +549,12 @@ def main():
                 if ospath.isfile(".restartmsg"):
                     with open(".restartmsg") as f:
                         chat_id, msg_id = map(int, f)
-                    msg = f"😎Restarted successfully❗\n"
+                    msg = f"🍁Restarted successfully🦋\n"
                     msg += f"📅DATE: {date}\n"
                     msg += f"⌚TIME: {time}\n"
                     msg += f"🌐TIMEZONE: {TIMEZONE}\n"
                 else:
-                    msg = f"😎Bot Restarted!\n"
+                    msg = f"🍁Bot Restarted!🦋\n"
                     msg += f"📅DATE: {date}\n"
                     msg += f"⌚TIME: {time}\n"
                     msg += f"🌐TIMEZONE: {TIMEZONE}"
@@ -564,7 +564,7 @@ def main():
                      for index, link in enumerate(links, start=1):
                          msg += f" <a href='{link}'>{index}</a> |"
                          if len(msg.encode()) > 4000:
-                             if '😎Restarted successfully❗' in msg and cid == chat_id:
+                             if '🍁Restarted successfully🦋' in msg and cid == chat_id:
                                  bot.editMessageText(msg, chat_id, msg_id, parse_mode='HTML', disable_web_page_preview=True)
                                  osremove(".restartmsg")
                              else:
@@ -573,7 +573,7 @@ def main():
                                  except Exception as e:
                                      LOGGER.error(e)
                              msg = ''
-                if '😎Restarted successfully❗' in msg and cid == chat_id:
+                if '🍁Restarted successfully❗' in msg and cid == chat_id:
                      bot.editMessageText(msg, chat_id, msg_id, parse_mode='HTML', disable_web_page_preview=True)
                      osremove(".restartmsg")
                 else:
@@ -585,11 +585,11 @@ def main():
     if ospath.isfile(".restartmsg"):
         with open(".restartmsg") as f:
             chat_id, msg_id = map(int, f)
-        msg = f"😎Restarted successfully❗\n📅DATE: {date}\n⌚TIME: {time}\n🌐TIMEZONE: {TIMEZONE}\n"
+        msg = f"🍁Restarted successfully❗\n📅DATE: {date}\n⌚TIME: {time}\n🌐TIMEZONE: {TIMEZONE}\n"
         bot.edit_message_text(msg, chat_id, msg_id)
         osremove(".restartmsg")
     elif not notifier_dict and AUTHORIZED_CHATS:
-        text = f"😎Bot Restarted❗ \n📅DATE: {date} \n⌚TIME: {time} \n🌐TIMEZONE: {TIMEZONE}"
+        text = f"🍁Bot Restarted❗ \n📅DATE: {date} \n⌚TIME: {time} \n🌐TIMEZONE: {TIMEZONE}"
         for id_ in AUTHORIZED_CHATS:
             try:
                 bot.sendMessage(chat_id=id_, text=text, parse_mode=ParseMode.HTML)
@@ -614,7 +614,7 @@ def main():
     dispatcher.add_handler(stats_handler)
     dispatcher.add_handler(log_handler)
     updater.start_polling(drop_pending_updates=IGNORE_PENDING_REQUESTS)
-    LOGGER.info("💥𝐁𝐨𝐭 𝐒𝐭𝐚𝐫𝐭𝐞𝐝❗")
+    LOGGER.info("❤‍🔥𝐁𝐨𝐭 𝐒𝐭𝐚𝐫𝐭𝐞𝐝🦋")
     signal(SIGINT, exit_clean_up)
 
 app.start()
